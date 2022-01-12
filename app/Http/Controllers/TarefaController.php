@@ -27,6 +27,25 @@ class TarefaController extends Controller
         return view('tarefas.add');
     }
 
+    // Utilizando validação do Laravel
+    public function addAction(Request $request)
+    {
+        // Caso não passe, ele retorna para a tela anterior que no caso é o tarefas.add com os erros
+        $request->validate([
+            'titulo' => ['required', 'string']
+        ]);
+        
+        $titulo = $request->input('titulo');
+
+        DB::insert('INSERT INTO tarefas (titulo) VALUES (:titulo)', [
+            'titulo' => $titulo
+        ]);
+
+        return redirect()->route('tarefas.list');
+    }
+
+    /*
+    * Minhas próprias validações
     public function addAction(Request $request)
     {
         
@@ -42,6 +61,7 @@ class TarefaController extends Controller
             return redirect()->route('tarefas.add')->with('warning', 'Você não preencheu o título');
         }
     }
+    */
 
     public function edit($id)
     {
