@@ -1,5 +1,5 @@
 # **Instruções**
-## Laravel 8 - Sistema de CRUD usando DB.
+## Laravel 8 - Sistema de CRUD usando DB, validação própria no Edit e validação do laravel no Add.
 
 _Instalação do Sistema:_
 
