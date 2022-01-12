@@ -4,7 +4,8 @@
 _Instalação do Sistema:_
 
 1. Clone o projeto
-2. Acessa a url: http://localhost/md4-bk-laravel-qb/
+2. Modifique o .env
+3. Acessa a url: http://localhost/tarefas
 
 _Ferramentas utilizadas:_
 - `PHP 7.4`
